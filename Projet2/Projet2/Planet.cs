@@ -77,11 +77,6 @@ namespace Projet2
         {
             string tmp = "";
             tmp += "ID : " + this.Id + " / Name : " + this.Name + " / Localization : " + this.Localization + " / Population : " + this.Population + " / Language : " + this.Language + " / Climate : " + this.Climate + "\n";
-            tmp += "Characters from this planet : \n";
-            for (int i = 0; i < this.CharactersFrom.ListCharacter.Count; i++)
-            {
-                tmp += "  - " + this.CharactersFrom.ListCharacter[i].ToString() + "\n";
-            }
             return tmp;
         }
 

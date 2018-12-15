@@ -46,7 +46,6 @@
     <Compile Include="Character.cs" />
     <Compile Include="Characters.cs" />
     <Compile Include="DeadCharacter.cs" />
-    <Compile Include="IHM.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="Planets.cs" />
     <Compile Include="Program.cs" />

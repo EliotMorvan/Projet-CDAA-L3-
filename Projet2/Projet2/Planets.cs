@@ -12,7 +12,7 @@ namespace Projet2
         private List<Planet> listPlanet;
 
         //Getter&Setter
-        internal List<Planet> ListPlanet
+        public List<Planet> ListPlanet
         {
             get { return this.listPlanet; }
             set { this.listPlanet = value; }

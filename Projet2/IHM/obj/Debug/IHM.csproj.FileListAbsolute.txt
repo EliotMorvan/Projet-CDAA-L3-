@@ -2,10 +2,10 @@ C:\Users\MORVAN\Desktop\Projet2\IHM\bin\Debug\IHM.exe.config
 C:\Users\MORVAN\Desktop\Projet2\IHM\bin\Debug\IHM.exe
 C:\Users\MORVAN\Desktop\Projet2\IHM\bin\Debug\IHM.pdb
 C:\Users\MORVAN\Desktop\Projet2\IHM\obj\Debug\IHM.csprojResolveAssemblyReference.cache
-C:\Users\MORVAN\Desktop\Projet2\IHM\obj\Debug\IHM.Form1.resources
 C:\Users\MORVAN\Desktop\Projet2\IHM\obj\Debug\IHM.Properties.Resources.resources
 C:\Users\MORVAN\Desktop\Projet2\IHM\obj\Debug\IHM.csproj.GenerateResource.Cache
 C:\Users\MORVAN\Desktop\Projet2\IHM\obj\Debug\IHM.exe
 C:\Users\MORVAN\Desktop\Projet2\IHM\obj\Debug\IHM.pdb
 C:\Users\MORVAN\Desktop\Projet2\IHM\bin\Debug\Projet2.exe
 C:\Users\MORVAN\Desktop\Projet2\IHM\bin\Debug\Projet2.pdb
+C:\Users\MORVAN\Desktop\Projet2\IHM\obj\Debug\IHM.Accueil.resources

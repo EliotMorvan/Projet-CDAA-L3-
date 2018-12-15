@@ -12,7 +12,7 @@ namespace Projet2
         private List<Character> listCharacter;
 
         //Getter&Setter
-        internal List<Character> ListCharacter
+        public List<Character> ListCharacter
         {
             get { return this.listCharacter; }
             set { this.listCharacter = value; }

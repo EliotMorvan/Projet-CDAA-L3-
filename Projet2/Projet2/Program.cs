@@ -14,11 +14,11 @@ namespace Projet2
         static void Main(string[] args)
         {
             //Test
-            initForTest();
+            initForTest(ref planets, ref characters);
             displayMainMenu();
         }
 
-        public static void initForTest()
+        public static void initForTest(ref Planets planets, ref Characters characters)
         {
             //Declare characters
             Character cYoda = new Character(1, "Yoda", "No lastname", 800, "Unknown", TypeOfSoldier.Jedi);

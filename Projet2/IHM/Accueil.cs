@@ -17,8 +17,9 @@ namespace IHM
         private Planets planets;
         private List<Control> mainPageButtons = new List<Control>();
         private List<Control> addCharPageButtons = new List<Control>();
+        private List<Control> addPlanetPageButtons = new List<Control>();
 
-        //Get / Set
+        //Getter
         public Characters Characters
         {
             get { return this.characters; }
@@ -43,6 +44,7 @@ namespace IHM
             this.m_displayAllCharacters = new System.Windows.Forms.Button();
             this.m_displayAllPlanets = new System.Windows.Forms.Button();
             this.m_addACharacter = new System.Windows.Forms.Button();
+            this.m_addAPlanet = new System.Windows.Forms.Button();
             this.l_display = new System.Windows.Forms.Label();
             this.l_planet = new System.Windows.Forms.Label();
             this.l_firstName = new System.Windows.Forms.Label();
@@ -56,21 +58,20 @@ namespace IHM
             this.cb_planetChoice = new System.Windows.Forms.ComboBox();
             this.b_add = new System.Windows.Forms.Button();
             this.b_cancel = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            this.l_planet = new System.Windows.Forms.Label();
-            this.l_firstName = new System.Windows.Forms.Label();
-            this.tb_firstName = new System.Windows.Forms.TextBox();
-            this.l_lastName = new System.Windows.Forms.Label();
-            this.tb_lastName = new System.Windows.Forms.TextBox();
-            this.l_age = new System.Windows.Forms.Label();
-            this.tb_age = new System.Windows.Forms.TextBox();
-            this.l_race = new System.Windows.Forms.Label();
-            this.tb_race = new System.Windows.Forms.TextBox();
             this.l_typeOfSoldier = new System.Windows.Forms.Label();
             this.cb_typeOfSoldier = new System.Windows.Forms.ComboBox();
-            this.cb_planetChoice = new System.Windows.Forms.ComboBox();
-            this.b_add = new System.Windows.Forms.Button();
-            this.b_cancel = new System.Windows.Forms.Button();
+            this.tb_name = new System.Windows.Forms.TextBox();
+            this.l_name = new System.Windows.Forms.Label();
+            this.l_localization = new System.Windows.Forms.Label();
+            this.tb_localization = new System.Windows.Forms.TextBox();
+            this.l_population = new System.Windows.Forms.Label();
+            this.tb_population = new System.Windows.Forms.TextBox();
+            this.l_language = new System.Windows.Forms.Label();
+            this.tb_language = new System.Windows.Forms.TextBox();
+            this.l_climate = new System.Windows.Forms.Label();
+            this.tb_climate = new System.Windows.Forms.TextBox();
+            this.b_add2 = new System.Windows.Forms.Button();
+            this.b_cancel2 = new System.Windows.Forms.Button();
 
             // 
             // m_displayAllCharacters
@@ -102,6 +103,16 @@ namespace IHM
             this.m_addACharacter.Text = "Add a character";
             this.m_addACharacter.UseVisualStyleBackColor = true;
             this.m_addACharacter.Click += new System.EventHandler(this.m_addACharacter_Click);
+            // 
+            // m_addAPlanet
+            // 
+            this.m_addAPlanet.Location = new System.Drawing.Point(393, 12);
+            this.m_addAPlanet.Name = "m_addAPlanet";
+            this.m_addAPlanet.Size = new System.Drawing.Size(121, 23);
+            this.m_addAPlanet.TabIndex = 3;
+            this.m_addAPlanet.Text = "Add a Planet";
+            this.m_addAPlanet.UseVisualStyleBackColor = true;
+            this.m_addAPlanet.Click += new System.EventHandler(this.m_addAPlanet_Click);
             // 
             // l_display
             // 
@@ -228,14 +239,115 @@ namespace IHM
             this.b_cancel.Text = "Cancel";
             this.b_cancel.UseVisualStyleBackColor = true;
             this.b_cancel.Click += new System.EventHandler(this.b_cancel_Click);
+            // 
+            // tb_name
+            // 
+            this.tb_name.Location = new System.Drawing.Point(12, 12);
+            this.tb_name.Name = "tb_name";
+            this.tb_name.Size = new System.Drawing.Size(112, 20);
+            this.tb_name.TabIndex = 0;
+            // 
+            // l_name
+            // 
+            this.l_name.AutoSize = true;
+            this.l_name.Location = new System.Drawing.Point(149, 19);
+            this.l_name.Name = "l_name";
+            this.l_name.Size = new System.Drawing.Size(33, 13);
+            this.l_name.TabIndex = 1;
+            this.l_name.Text = "name";
+            // 
+            // l_localization
+            // 
+            this.l_localization.AutoSize = true;
+            this.l_localization.Location = new System.Drawing.Point(149, 45);
+            this.l_localization.Name = "l_localization";
+            this.l_localization.Size = new System.Drawing.Size(59, 13);
+            this.l_localization.TabIndex = 3;
+            this.l_localization.Text = "localization";
+            // 
+            // tb_localization
+            // 
+            this.tb_localization.Location = new System.Drawing.Point(12, 38);
+            this.tb_localization.Name = "tb_localization";
+            this.tb_localization.Size = new System.Drawing.Size(112, 20);
+            this.tb_localization.TabIndex = 2;
+            // 
+            // l_population
+            // 
+            this.l_population.AutoSize = true;
+            this.l_population.Location = new System.Drawing.Point(149, 71);
+            this.l_population.Name = "l_population";
+            this.l_population.Size = new System.Drawing.Size(56, 13);
+            this.l_population.TabIndex = 5;
+            this.l_population.Text = "population";
+            // 
+            // tb_population
+            // 
+            this.tb_population.Location = new System.Drawing.Point(12, 64);
+            this.tb_population.Name = "tb_population";
+            this.tb_population.Size = new System.Drawing.Size(112, 20);
+            this.tb_population.TabIndex = 4;
+            // 
+            // l_language
+            // 
+            this.l_language.AutoSize = true;
+            this.l_language.Location = new System.Drawing.Point(149, 97);
+            this.l_language.Name = "l_language";
+            this.l_language.Size = new System.Drawing.Size(51, 13);
+            this.l_language.TabIndex = 7;
+            this.l_language.Text = "language";
+            // 
+            // tb_language
+            // 
+            this.tb_language.Location = new System.Drawing.Point(12, 90);
+            this.tb_language.Name = "tb_language";
+            this.tb_language.Size = new System.Drawing.Size(112, 20);
+            this.tb_language.TabIndex = 6;
+            // 
+            // l_climate
+            // 
+            this.l_climate.AutoSize = true;
+            this.l_climate.Location = new System.Drawing.Point(149, 123);
+            this.l_climate.Name = "l_climate";
+            this.l_climate.Size = new System.Drawing.Size(40, 13);
+            this.l_climate.TabIndex = 9;
+            this.l_climate.Text = "climate";
+            // 
+            // tb_climate
+            // 
+            this.tb_climate.Location = new System.Drawing.Point(12, 116);
+            this.tb_climate.Name = "tb_climate";
+            this.tb_climate.Size = new System.Drawing.Size(112, 20);
+            this.tb_climate.TabIndex = 8;
+            // 
+            // b_add2
+            // 
+            this.b_add2.Location = new System.Drawing.Point(12, 158);
+            this.b_add2.Name = "b_add2";
+            this.b_add2.Size = new System.Drawing.Size(75, 23);
+            this.b_add2.TabIndex = 10;
+            this.b_add2.Text = "add";
+            this.b_add2.UseVisualStyleBackColor = true;
+            this.b_add2.Click += new System.EventHandler(this.b_add2_Click);
+            // 
+            // b_cancel2
+            // 
+            this.b_cancel2.Location = new System.Drawing.Point(93, 158);
+            this.b_cancel2.Name = "b_cancel2";
+            this.b_cancel2.Size = new System.Drawing.Size(75, 23);
+            this.b_cancel2.TabIndex = 11;
+            this.b_cancel2.Text = "cancel";
+            this.b_cancel2.UseVisualStyleBackColor = true;
+            this.b_cancel2.Click += new System.EventHandler(this.b_cancel2_Click);
 
             //Stock all buttons on their respective list
             //Main page
             mainPageButtons.Add(m_displayAllCharacters);
             mainPageButtons.Add(m_displayAllPlanets);
             mainPageButtons.Add(m_addACharacter);
+            mainPageButtons.Add(m_addAPlanet);
 
-            //Add a character page
+            //Character addition page
             addCharPageButtons.Add(l_planet);
             addCharPageButtons.Add(l_firstName);
             addCharPageButtons.Add(tb_firstName);
@@ -249,7 +361,21 @@ namespace IHM
             addCharPageButtons.Add(cb_typeOfSoldier);
             addCharPageButtons.Add(cb_planetChoice);
             addCharPageButtons.Add(b_add);
-            addCharPageButtons.Add(b_cancel); 
+            addCharPageButtons.Add(b_cancel);
+
+            //Planet addition page
+            addPlanetPageButtons.Add(tb_name);
+            addPlanetPageButtons.Add(l_name);
+            addPlanetPageButtons.Add(tb_localization);
+            addPlanetPageButtons.Add(l_localization);
+            addPlanetPageButtons.Add(tb_population);
+            addPlanetPageButtons.Add(l_population);
+            addPlanetPageButtons.Add(tb_language);
+            addPlanetPageButtons.Add(l_language);
+            addPlanetPageButtons.Add(tb_climate);
+            addPlanetPageButtons.Add(l_climate);
+            addPlanetPageButtons.Add(b_add2);
+            addPlanetPageButtons.Add(b_cancel2);
         }
 
         //Display the main page components
@@ -262,6 +388,12 @@ namespace IHM
         private void displayAddCharPageButtons()
         {
             addCharPageButtons.ForEach(button => this.Controls.Add(button));
+        }
+
+        //Display the add character page components
+        private void displayAddPlanetPageButtons()
+        {
+            addPlanetPageButtons.ForEach(button => this.Controls.Add(button));
         }
 
         //Appel régulier de la combobox afin d'avoir également les planètes ajoutées durant l'exécution
@@ -323,8 +455,23 @@ namespace IHM
             SetPlanetChoices();
         }
 
+        //Action on the "add a planet" button
+        private void m_addAPlanet_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            displayAddPlanetPageButtons();
+            SetPlanetChoices();
+        }
+
         //Action on the "cancel" button
         private void b_cancel_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            displayMainPageButtons();
+        }
+
+        //Action on the "cancel" button n.2
+        private void b_cancel2_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
             displayMainPageButtons();
@@ -345,7 +492,30 @@ namespace IHM
 
             //Add it to the characters list
             this.characters.addCharacter(newChar);
-            
+
+            this.Controls.Clear();
+            displayMainPageButtons();
+        }
+
+        //Action on the "add" button n.2
+        private void b_add2_Click(object sender, EventArgs e)
+        {
+            //Get all values
+            string name = tb_name.Text;
+            string localization = tb_localization.Text;
+            int population = Convert.ToInt32(tb_population.Text);
+            string language = tb_language.Text;
+            string climate = tb_climate.Text;
+            Characters charactersFrom = new Characters();
+
+            //Create new character
+            Planet newPlanet = new Planet(planets.ListPlanet.Count, name, localization, population, language, climate, charactersFrom);
+
+            //Add it to the characters list
+            this.planets.addPlanet(newPlanet);
+
+            this.Controls.Clear();
+            displayMainPageButtons();
         }
     }
 }

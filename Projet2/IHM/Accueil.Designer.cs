@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             
+            
             // 
             // Accueil
             // 
@@ -47,6 +48,7 @@
         private System.Windows.Forms.Button m_displayAllCharacters;
         private System.Windows.Forms.Button m_displayAllPlanets;
         private System.Windows.Forms.Button m_addACharacter;
+        private System.Windows.Forms.Button m_addAPlanet;
         private System.Windows.Forms.Label l_display;
         private System.Windows.Forms.Label l_planet;
         private System.Windows.Forms.Label l_firstName;
@@ -62,6 +64,18 @@
         private System.Windows.Forms.ComboBox cb_planetChoice;
         private System.Windows.Forms.Button b_add;
         private System.Windows.Forms.Button b_cancel;
+        private System.Windows.Forms.TextBox tb_name;
+        private System.Windows.Forms.Label l_name;
+        private System.Windows.Forms.Label l_localization;
+        private System.Windows.Forms.TextBox tb_localization;
+        private System.Windows.Forms.Label l_population;
+        private System.Windows.Forms.TextBox tb_population;
+        private System.Windows.Forms.Label l_language;
+        private System.Windows.Forms.TextBox tb_language;
+        private System.Windows.Forms.Label l_climate;
+        private System.Windows.Forms.TextBox tb_climate;
+        private System.Windows.Forms.Button b_add2;
+        private System.Windows.Forms.Button b_cancel2;
     }
 }
 

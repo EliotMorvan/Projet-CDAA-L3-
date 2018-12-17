@@ -35,6 +35,12 @@ namespace Projet2
         public override string ToString()
         {
             string tmp = "";
+
+            if(this.ListPlanet.Count == 0)
+            {
+                tmp = "error: no planets registered";
+            }
+
             for (int i = 0; i < this.ListPlanet.Count; i++)
             {
                 tmp += this.ListPlanet[i].ToString();

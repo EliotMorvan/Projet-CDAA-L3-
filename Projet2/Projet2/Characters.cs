@@ -81,6 +81,12 @@ namespace Projet2
         public override string ToString()
         {
             string tmp = "";
+
+            if (this.ListCharacter.Count == 0)
+            {
+                tmp = "error: no characters registered";
+            }
+
             for (int i = 0; i < this.ListCharacter.Count; i++)
             {
                 tmp += this.ListCharacter[i].ToString() + "\n";

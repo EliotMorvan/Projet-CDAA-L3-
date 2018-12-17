@@ -13,23 +13,21 @@ namespace IHM
 {
     public partial class Accueil : Form
     {
-        private Characters characters;
-        private Planets planets;
+        private Characters characters = new Characters();
+        private Planets planets = new Planets();
+
         private List<Control> mainPageButtons = new List<Control>();
+
         private List<Control> addCharPageButtons = new List<Control>();
         private List<Control> addPlanetPageButtons = new List<Control>();
 
-        //Getter
-        public Characters Characters
-        {
-            get { return this.characters; }
-        }
+        private List<Control> deletePlanetPageButtons = new List<Control>();
+        private List<Control> deleteCharPageButtons = new List<Control>();
 
         //Constructeur / Initialisation de l'interface
         public Accueil()
         {
             InitializeComponent();
-            Projet2.Program.initForTest(ref planets, ref characters);
             RegisterButtons();
             displayMainPageButtons();
         }
@@ -72,6 +70,18 @@ namespace IHM
             this.tb_climate = new System.Windows.Forms.TextBox();
             this.b_add2 = new System.Windows.Forms.Button();
             this.b_cancel2 = new System.Windows.Forms.Button();
+            this.b_reset = new System.Windows.Forms.Button();
+            this.b_initiate = new System.Windows.Forms.Button();
+            this.b_delete_plan = new System.Windows.Forms.Button();
+            this.b_delete_char = new System.Windows.Forms.Button();
+            this.cb_characters = new System.Windows.Forms.ComboBox();
+            this.l_characters = new System.Windows.Forms.Label();
+            this.b_delete = new System.Windows.Forms.Button();
+            this.b_cancel3 = new System.Windows.Forms.Button();
+            this.l_planets = new System.Windows.Forms.Label();
+            this.cb_planets = new System.Windows.Forms.ComboBox();
+            this.b_delete2 = new System.Windows.Forms.Button();
+            this.b_cancel4 = new System.Windows.Forms.Button();
 
             // 
             // m_displayAllCharacters
@@ -118,8 +128,7 @@ namespace IHM
             // 
             l_display.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             l_display.AutoSize = true;
-            l_display.Location = new Point(10, 100);
-            l_display.Text = planets.ToString();
+            l_display.Location = new Point(10, 150);
             // 
             // l_planet
             // 
@@ -338,7 +347,121 @@ namespace IHM
             this.b_cancel2.TabIndex = 11;
             this.b_cancel2.Text = "cancel";
             this.b_cancel2.UseVisualStyleBackColor = true;
-            this.b_cancel2.Click += new System.EventHandler(this.b_cancel2_Click);
+            this.b_cancel2.Click += new System.EventHandler(this.b_cancel_Click);
+            // 
+            // b_reset
+            // 
+            this.b_reset.Location = new System.Drawing.Point(12, 93);
+            this.b_reset.Name = "b_reset";
+            this.b_reset.Size = new System.Drawing.Size(75, 23);
+            this.b_reset.TabIndex = 0;
+            this.b_reset.Text = "Reset";
+            this.b_reset.UseVisualStyleBackColor = true;
+            this.b_reset.Click += new System.EventHandler(this.b_reset_Click);
+            // 
+            // b_initiate
+            // 
+            this.b_initiate.Location = new System.Drawing.Point(93, 93);
+            this.b_initiate.Name = "b_initiate";
+            this.b_initiate.Size = new System.Drawing.Size(75, 23);
+            this.b_initiate.TabIndex = 1;
+            this.b_initiate.Text = "Initiate";
+            this.b_initiate.UseVisualStyleBackColor = true;
+            this.b_initiate.Click += new System.EventHandler(this.b_initiate_Click);
+            // 
+            // b_delete_plan
+            // 
+            this.b_delete_plan.Location = new System.Drawing.Point(393, 39);
+            this.b_delete_plan.Name = "b_delete_plan";
+            this.b_delete_plan.Size = new System.Drawing.Size(121, 23);
+            this.b_delete_plan.TabIndex = 0;
+            this.b_delete_plan.Text = "Delete a planet";
+            this.b_delete_plan.UseVisualStyleBackColor = true;
+            this.b_delete_plan.Click += new System.EventHandler(this.b_delete_plan_Click);
+            // 
+            // b_delete_char
+            // 
+            this.b_delete_char.Location = new System.Drawing.Point(266, 39);
+            this.b_delete_char.Name = "b_delete_char";
+            this.b_delete_char.Size = new System.Drawing.Size(121, 23);
+            this.b_delete_char.TabIndex = 1;
+            this.b_delete_char.Text = "Delete a character";
+            this.b_delete_char.UseVisualStyleBackColor = true;
+            this.b_delete_char.Click += new System.EventHandler(this.b_delete_char_Click);
+            // 
+            // cb_characters
+            // 
+            this.cb_characters.FormattingEnabled = true;
+            this.cb_characters.Location = new System.Drawing.Point(12, 25);
+            this.cb_characters.Name = "cb_characters";
+            this.cb_characters.Size = new System.Drawing.Size(173, 21);
+            this.cb_characters.TabIndex = 0;
+            // 
+            // l_characters
+            // 
+            this.l_characters.AutoSize = true;
+            this.l_characters.Location = new System.Drawing.Point(12, 9);
+            this.l_characters.Name = "l_characters";
+            this.l_characters.Size = new System.Drawing.Size(57, 13);
+            this.l_characters.TabIndex = 1;
+            this.l_characters.Text = "characters";
+            // 
+            // b_delete
+            // 
+            this.b_delete.Location = new System.Drawing.Point(12, 102);
+            this.b_delete.Name = "b_delete";
+            this.b_delete.Size = new System.Drawing.Size(75, 23);
+            this.b_delete.TabIndex = 2;
+            this.b_delete.Text = "delete";
+            this.b_delete.UseVisualStyleBackColor = true;
+            this.b_delete.Click += new System.EventHandler(this.b_delete_Click);
+            // 
+            // b_cancel3
+            // 
+            this.b_cancel3.Location = new System.Drawing.Point(110, 102);
+            this.b_cancel3.Name = "b_cancel3";
+            this.b_cancel3.Size = new System.Drawing.Size(75, 23);
+            this.b_cancel3.TabIndex = 3;
+            this.b_cancel3.Text = "cancel";
+            this.b_cancel3.UseVisualStyleBackColor = true;
+            this.b_cancel3.Click += new System.EventHandler(this.b_cancel_Click);
+            // 
+            // l_planets
+            // 
+            this.l_planets.AutoSize = true;
+            this.l_planets.Location = new System.Drawing.Point(13, 10);
+            this.l_planets.Name = "l_planets";
+            this.l_planets.Size = new System.Drawing.Size(37, 13);
+            this.l_planets.TabIndex = 0;
+            this.l_planets.Text = "Planet";
+            // 
+            // cb_planets
+            // 
+            this.cb_planets.FormattingEnabled = true;
+            this.cb_planets.Location = new System.Drawing.Point(16, 25);
+            this.cb_planets.Name = "cb_planets";
+            this.cb_planets.Size = new System.Drawing.Size(173, 21);
+            this.cb_planets.TabIndex = 1;
+            // 
+            // b_delete2
+            // 
+            this.b_delete2.Location = new System.Drawing.Point(12, 102);
+            this.b_delete2.Name = "b_delete2";
+            this.b_delete2.Size = new System.Drawing.Size(75, 23);
+            this.b_delete2.TabIndex = 2;
+            this.b_delete2.Text = "delete";
+            this.b_delete2.UseVisualStyleBackColor = true;
+            this.b_delete2.Click += new System.EventHandler(this.b_delete2_Click);
+            // 
+            // b_cancel4
+            // 
+            this.b_cancel4.Location = new System.Drawing.Point(110, 102);
+            this.b_cancel4.Name = "b_cancel4";
+            this.b_cancel4.Size = new System.Drawing.Size(75, 23);
+            this.b_cancel4.TabIndex = 3;
+            this.b_cancel4.Text = "cancel";
+            this.b_cancel4.UseVisualStyleBackColor = true;
+            this.b_cancel4.Click += new System.EventHandler(this.b_cancel_Click);
 
             //Stock all buttons on their respective list
             //Main page
@@ -346,6 +469,10 @@ namespace IHM
             mainPageButtons.Add(m_displayAllPlanets);
             mainPageButtons.Add(m_addACharacter);
             mainPageButtons.Add(m_addAPlanet);
+            mainPageButtons.Add(b_delete_char);
+            mainPageButtons.Add(b_delete_plan);
+            mainPageButtons.Add(b_reset);
+            mainPageButtons.Add(b_initiate);
 
             //Character addition page
             addCharPageButtons.Add(l_planet);
@@ -376,6 +503,18 @@ namespace IHM
             addPlanetPageButtons.Add(l_climate);
             addPlanetPageButtons.Add(b_add2);
             addPlanetPageButtons.Add(b_cancel2);
+
+            //Character removing page
+            deleteCharPageButtons.Add(l_characters);
+            deleteCharPageButtons.Add(cb_characters);
+            deleteCharPageButtons.Add(b_delete);
+            deleteCharPageButtons.Add(b_cancel3);
+
+            //Planet removing page
+            deletePlanetPageButtons.Add(l_planets);
+            deletePlanetPageButtons.Add(cb_planets);
+            deletePlanetPageButtons.Add(b_delete2);
+            deletePlanetPageButtons.Add(b_cancel4);
         }
 
         //Display the main page components
@@ -396,7 +535,7 @@ namespace IHM
             addPlanetPageButtons.ForEach(button => this.Controls.Add(button));
         }
 
-        //Appel régulier de la combobox afin d'avoir également les planètes ajoutées durant l'exécution
+        //Appel ponctuel de la combobox afin d'avoir également les planètes ajoutées durant l'exécution
         public void SetPlanetChoices()
         {
             Dictionary<Planet, string> values = new Dictionary<Planet, string>();
@@ -410,6 +549,19 @@ namespace IHM
             cb_planetChoice.ValueMember = "Key";
         }
 
+        //Display the removing character page components
+        public void displayDeleteCharPageButtons()
+        {
+            deleteCharPageButtons.ForEach(button => this.Controls.Add(button));
+        }
+
+        //Display the removing planet page components
+        public void displayDeletePlanetPageButtons()
+        {
+            deletePlanetPageButtons.ForEach(button => this.Controls.Add(button));
+        }
+
+        //Liste de tous les types pour la création d'un personnage
         public void SetTypeOfSoldiers()
         {
             Dictionary<TypeOfSoldier, string> values = new Dictionary<TypeOfSoldier, string>();
@@ -423,6 +575,28 @@ namespace IHM
             cb_typeOfSoldier.DataSource = new BindingSource(values, null);
             cb_typeOfSoldier.DisplayMember = "Value";
             cb_typeOfSoldier.ValueMember = "Key";
+        }
+
+        //List all characters into a Dictionnary for the comboBox in the removing character page 
+        public void SetCharactersList()
+        {
+            Dictionary<Character, string> values = new Dictionary<Character, string>();
+            this.characters.ListCharacter.ForEach(character => values.Add(character, "["+character.Id+"] " + character.Firstname + " " + character.Lastname));    
+
+            cb_characters.DataSource = new BindingSource(values, null);
+            cb_characters.DisplayMember = "Value";
+            cb_characters.ValueMember = "Key";
+        }
+
+        //List all characters into a Dictionnary for the comboBox in the removing character page 
+        public void SetPlanetsList()
+        {
+            Dictionary<Planet, string> values = new Dictionary<Planet, string>();
+            this.planets.ListPlanet.ForEach(planet => values.Add(planet, "["+planet.Id+"] " + planet.Name));
+
+            cb_planets.DataSource = new BindingSource(values, null);
+            cb_planets.DisplayMember = "Value";
+            cb_planets.ValueMember = "Key";
         }
 
         //////////////////////////
@@ -450,9 +624,24 @@ namespace IHM
         //Action on the "add a character" button
         private void m_addACharacter_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear();
-            displayAddCharPageButtons();
-            SetPlanetChoices();
+            bool canAddChar = false;
+            if (this.planets.ListPlanet.Count != 0)
+            {
+                canAddChar = true;
+            }
+
+            if (canAddChar)
+            {
+                this.Controls.Clear();
+                displayAddCharPageButtons();
+                SetPlanetChoices();
+            }
+
+            else
+            {
+                this.l_display.Text = "Invalid option: Character needs a planet to be created";
+                this.Controls.Add(l_display);
+            }
         }
 
         //Action on the "add a planet" button
@@ -465,13 +654,6 @@ namespace IHM
 
         //Action on the "cancel" button
         private void b_cancel_Click(object sender, EventArgs e)
-        {
-            this.Controls.Clear();
-            displayMainPageButtons();
-        }
-
-        //Action on the "cancel" button n.2
-        private void b_cancel2_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
             displayMainPageButtons();
@@ -516,6 +698,95 @@ namespace IHM
 
             this.Controls.Clear();
             displayMainPageButtons();
+        }
+
+        //Action on the "reset" button
+        private void b_reset_Click(object sender, EventArgs e)
+        {
+            bool displayPlanets = false;
+            if (this.l_display.Text == this.planets.ToString())
+            {
+                displayPlanets = true;
+            }
+
+            this.planets = new Planets();
+            this.characters = new Characters();
+
+            if (displayPlanets)
+                m_displayAllPlanets_Click(sender, e);
+            else
+                m_displayAllCharacters_Click(sender, e);
+        }
+
+        //Action on the "initiate" button
+        private void b_initiate_Click(object sender, EventArgs e)
+        {
+            bool displayPlanets = false;
+            if(this.l_display.Text == this.planets.ToString())
+            {
+                displayPlanets = true;
+            }
+
+            Projet2.Program.initForTest(ref planets, ref characters);
+
+            if (displayPlanets)
+                m_displayAllPlanets_Click(sender, e);
+            else
+                m_displayAllCharacters_Click(sender, e);
+        }
+
+        //Action on the "delete a planet" button
+        private void b_delete_plan_Click(object sender, EventArgs e)
+        {
+            if(this.planets.ListPlanet.Count == 0)
+            {
+                l_display.Text = this.planets.ToString();
+                this.Controls.Add(l_display);
+            }
+            else
+            {
+                this.Controls.Clear();
+                SetPlanetsList();
+                displayDeletePlanetPageButtons();
+            }
+        }
+
+        //Action on the "delete a character" button
+        private void b_delete_char_Click(object sender, EventArgs e)
+        {
+            if (this.characters.ListCharacter.Count == 0)
+            {
+                l_display.Text = this.characters.ToString();
+                this.Controls.Add(l_display);
+            }
+            else
+            {
+                this.Controls.Clear();
+                SetCharactersList();
+                displayDeleteCharPageButtons();
+            }
+        }
+
+        //Action on the "delete" button (character removing page)
+        private void b_delete_Click(object sender, EventArgs e)
+        {
+            Character chara = ((KeyValuePair<Character, string>)cb_characters.SelectedItem).Key;
+            this.characters.deleteCharacter(chara.Id);
+            this.Controls.Clear();
+            displayMainPageButtons();
+            l_display.Text = chara.Firstname + " " + chara.Lastname + " has been succesfully removed.";
+            this.Controls.Add(l_display);
+        }
+
+        //Action on the "delete" button (planet removing page)
+        private void b_delete2_Click(object sender, EventArgs e)
+        {
+            Planet plan = ((KeyValuePair<Planet, string>)cb_planets.SelectedItem).Key;
+            this.planets.deletePlanet(plan.Id);
+            this.Controls.Clear();
+            displayMainPageButtons();
+            l_display.Text = plan.Name + " has been succesfully removed.";
+            this.Controls.Add(l_display);
         }
     }
 }

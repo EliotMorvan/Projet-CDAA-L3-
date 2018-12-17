@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            
-            
             // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 456);
+            this.ClientSize = new System.Drawing.Size(525, 456);
             this.Name = "Accueil";
             this.Text = "CDAA";
             this.ResumeLayout(false);
@@ -76,6 +74,18 @@
         private System.Windows.Forms.TextBox tb_climate;
         private System.Windows.Forms.Button b_add2;
         private System.Windows.Forms.Button b_cancel2;
+        private System.Windows.Forms.Button b_reset;
+        private System.Windows.Forms.Button b_initiate;
+        private System.Windows.Forms.Button b_delete_plan;
+        private System.Windows.Forms.Button b_delete_char;
+        private System.Windows.Forms.ComboBox cb_characters;
+        private System.Windows.Forms.Label l_characters;
+        private System.Windows.Forms.Button b_delete;
+        private System.Windows.Forms.Button b_cancel3;
+        private System.Windows.Forms.Label l_planets;
+        private System.Windows.Forms.ComboBox cb_planets;
+        private System.Windows.Forms.Button b_delete2;
+        private System.Windows.Forms.Button b_cancel4;
     }
 }
 

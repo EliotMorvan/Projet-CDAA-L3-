@@ -86,6 +86,7 @@ namespace IHM
             // 
             // m_displayAllCharacters
             // 
+            this.m_displayAllCharacters.Cursor = System.Windows.Forms.Cursors.Hand;
             this.m_displayAllCharacters.Location = new System.Drawing.Point(12, 12);
             this.m_displayAllCharacters.Name = "m_displayAllCharacters";
             this.m_displayAllCharacters.Size = new System.Drawing.Size(121, 23);
@@ -96,6 +97,7 @@ namespace IHM
             // 
             // m_displayAllPlanets
             // 
+            this.m_displayAllPlanets.Cursor = System.Windows.Forms.Cursors.Hand;
             this.m_displayAllPlanets.Location = new System.Drawing.Point(139, 12);
             this.m_displayAllPlanets.Name = "m_displayAllPlanets";
             this.m_displayAllPlanets.Size = new System.Drawing.Size(121, 23);
@@ -106,6 +108,7 @@ namespace IHM
             // 
             // m_addACharacter
             // 
+            this.m_addACharacter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.m_addACharacter.Location = new System.Drawing.Point(266, 12);
             this.m_addACharacter.Name = "m_addACharacter";
             this.m_addACharacter.Size = new System.Drawing.Size(121, 23);
@@ -116,6 +119,7 @@ namespace IHM
             // 
             // m_addAPlanet
             // 
+            this.m_addAPlanet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.m_addAPlanet.Location = new System.Drawing.Point(393, 12);
             this.m_addAPlanet.Name = "m_addAPlanet";
             this.m_addAPlanet.Size = new System.Drawing.Size(121, 23);
@@ -150,6 +154,7 @@ namespace IHM
             // 
             // tb_firstName
             // 
+            this.tb_firstName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_firstName.Location = new System.Drawing.Point(12, 38);
             this.tb_firstName.Name = "tb_firstName";
             this.tb_firstName.Size = new System.Drawing.Size(121, 20);
@@ -166,6 +171,7 @@ namespace IHM
             // 
             // tb_lastName
             // 
+            this.tb_lastName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_lastName.Location = new System.Drawing.Point(12, 64);
             this.tb_lastName.Name = "tb_lastName";
             this.tb_lastName.Size = new System.Drawing.Size(121, 20);
@@ -182,6 +188,7 @@ namespace IHM
             // 
             // tb_age
             // 
+            this.tb_age.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_age.Location = new System.Drawing.Point(12, 90);
             this.tb_age.Name = "tb_age";
             this.tb_age.Size = new System.Drawing.Size(121, 20);
@@ -198,6 +205,7 @@ namespace IHM
             // 
             // tb_race
             // 
+            this.tb_race.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_race.Location = new System.Drawing.Point(12, 116);
             this.tb_race.Name = "tb_race";
             this.tb_race.Size = new System.Drawing.Size(121, 20);
@@ -214,6 +222,7 @@ namespace IHM
             // 
             // cb_typeOfSoldier
             // 
+            this.cb_typeOfSoldier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_planetChoice.FormattingEnabled = true;
             this.cb_typeOfSoldier.Location = new System.Drawing.Point(12, 142);
             this.cb_typeOfSoldier.Name = "tb_race";
@@ -223,6 +232,7 @@ namespace IHM
             // 
             // cb_planetChoice
             // 
+            this.cb_planetChoice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_planetChoice.FormattingEnabled = true;
             this.cb_planetChoice.Location = new System.Drawing.Point(12, 10);
             this.cb_planetChoice.Name = "cb_planetChoice";
@@ -276,6 +286,7 @@ namespace IHM
             // 
             // tb_localization
             // 
+            this.tb_localization.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_localization.Location = new System.Drawing.Point(12, 38);
             this.tb_localization.Name = "tb_localization";
             this.tb_localization.Size = new System.Drawing.Size(112, 20);
@@ -292,6 +303,7 @@ namespace IHM
             // 
             // tb_population
             // 
+            this.tb_population.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_population.Location = new System.Drawing.Point(12, 64);
             this.tb_population.Name = "tb_population";
             this.tb_population.Size = new System.Drawing.Size(112, 20);
@@ -308,6 +320,7 @@ namespace IHM
             // 
             // tb_language
             // 
+            this.tb_language.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_language.Location = new System.Drawing.Point(12, 90);
             this.tb_language.Name = "tb_language";
             this.tb_language.Size = new System.Drawing.Size(112, 20);
@@ -324,6 +337,7 @@ namespace IHM
             // 
             // tb_climate
             // 
+            this.tb_climate.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_climate.Location = new System.Drawing.Point(12, 116);
             this.tb_climate.Name = "tb_climate";
             this.tb_climate.Size = new System.Drawing.Size(112, 20);
@@ -331,6 +345,7 @@ namespace IHM
             // 
             // b_add2
             // 
+            this.b_add2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_add2.Location = new System.Drawing.Point(12, 158);
             this.b_add2.Name = "b_add2";
             this.b_add2.Size = new System.Drawing.Size(75, 23);
@@ -341,6 +356,7 @@ namespace IHM
             // 
             // b_cancel2
             // 
+            this.b_cancel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_cancel2.Location = new System.Drawing.Point(93, 158);
             this.b_cancel2.Name = "b_cancel2";
             this.b_cancel2.Size = new System.Drawing.Size(75, 23);
@@ -351,6 +367,7 @@ namespace IHM
             // 
             // b_reset
             // 
+            this.b_reset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_reset.Location = new System.Drawing.Point(12, 93);
             this.b_reset.Name = "b_reset";
             this.b_reset.Size = new System.Drawing.Size(75, 23);
@@ -361,6 +378,7 @@ namespace IHM
             // 
             // b_initiate
             // 
+            this.b_initiate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_initiate.Location = new System.Drawing.Point(93, 93);
             this.b_initiate.Name = "b_initiate";
             this.b_initiate.Size = new System.Drawing.Size(75, 23);
@@ -371,6 +389,7 @@ namespace IHM
             // 
             // b_delete_plan
             // 
+            this.b_delete_plan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_delete_plan.Location = new System.Drawing.Point(393, 39);
             this.b_delete_plan.Name = "b_delete_plan";
             this.b_delete_plan.Size = new System.Drawing.Size(121, 23);
@@ -381,6 +400,7 @@ namespace IHM
             // 
             // b_delete_char
             // 
+            this.b_delete_char.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_delete_char.Location = new System.Drawing.Point(266, 39);
             this.b_delete_char.Name = "b_delete_char";
             this.b_delete_char.Size = new System.Drawing.Size(121, 23);
@@ -391,6 +411,7 @@ namespace IHM
             // 
             // cb_characters
             // 
+            this.cb_characters.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_characters.FormattingEnabled = true;
             this.cb_characters.Location = new System.Drawing.Point(12, 25);
             this.cb_characters.Name = "cb_characters";
@@ -408,6 +429,7 @@ namespace IHM
             // 
             // b_delete
             // 
+            this.b_delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_delete.Location = new System.Drawing.Point(12, 102);
             this.b_delete.Name = "b_delete";
             this.b_delete.Size = new System.Drawing.Size(75, 23);
@@ -418,6 +440,7 @@ namespace IHM
             // 
             // b_cancel3
             // 
+            this.b_cancel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_cancel3.Location = new System.Drawing.Point(110, 102);
             this.b_cancel3.Name = "b_cancel3";
             this.b_cancel3.Size = new System.Drawing.Size(75, 23);
@@ -437,6 +460,7 @@ namespace IHM
             // 
             // cb_planets
             // 
+            this.cb_planets.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_planets.FormattingEnabled = true;
             this.cb_planets.Location = new System.Drawing.Point(16, 25);
             this.cb_planets.Name = "cb_planets";
@@ -445,6 +469,7 @@ namespace IHM
             // 
             // b_delete2
             // 
+            this.b_delete2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_delete2.Location = new System.Drawing.Point(12, 102);
             this.b_delete2.Name = "b_delete2";
             this.b_delete2.Size = new System.Drawing.Size(75, 23);
@@ -455,6 +480,7 @@ namespace IHM
             // 
             // b_cancel4
             // 
+            this.b_cancel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_cancel4.Location = new System.Drawing.Point(110, 102);
             this.b_cancel4.Name = "b_cancel4";
             this.b_cancel4.Size = new System.Drawing.Size(75, 23);
